@@ -252,6 +252,7 @@ main {
 .dropdown {
   position: relative;
   display: flex;
+  cursor: pointer;
 }
 
 .dropdown-menu {
@@ -261,14 +262,16 @@ main {
   right: 0;
   top: 70px;
   transform: translateX(100%);
+  opacity: 0;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .dropdown-menu.show {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   transform: translateX(0);
+  opacity: 1;
 }
 
 .dropdown i {
@@ -1115,12 +1118,17 @@ aside {
   }
 
   .dropdown-menu {
-    transform: translateX(-200%);
     top: 100%;
+    left: 0;
+    width: max-content;
+    transform: translateX(-200%), scale(0);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
   .dropdown-menu.show {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
-    transform: translateX(-185px);
+    transform: translateX(0), scale(1);
+    opacity: 1;
   }
 }
