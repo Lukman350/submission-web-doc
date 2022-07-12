@@ -6,3 +6,4 @@ Proyek ini dibuat untuk memenuhi submission (Belajar Pemrograman Web untuk Pemul
 - Unsplash untuk gambar person
 - undraw untuk gambar ilustrasi
 - fontawesome untuk icon icon
+- animate.css untuk animasi pada website
